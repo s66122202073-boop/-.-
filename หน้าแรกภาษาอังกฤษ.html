@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ลงทะเบียนผู้ใช้งานใหม่ - อบต.เมืองยะลา</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0F4C3A",
+        secondary: "#C8A951",
+        "background-light": "#FDFBF7",
+        "background-dark": "#121C17",
+      },
+    },
+  },
+};
+</script>
+</head>
+
+<body class="bg-background-light min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-8">
+
+<h2 class="text-3xl font-bold text-primary text-center mb-6">
+ลงทะเบียนผู้ใช้งานใหม่
+</h2>
+
+<form>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+<!-- ชื่อ -->
+<div>
+<label class="text-sm font-semibold">ชื่อ-นามสกุล</label>
+<input class="w-full border p-3 rounded-xl" type="text"/>
+</div>
+
+<!-- บัตรประชาชน -->
+<div>
+<label class="text-sm font-semibold">เลขบัตรประชาชน</label>
+<input class="w-full border p-3 rounded-xl" type="text"/>
+</div>
+
+<!-- อีเมล -->
+<div class="md:col-span-2">
+<label class="text-sm font-semibold">อีเมล</label>
+<input class="w-full border p-3 rounded-xl" type="email"/>
+</div>
+
+<!-- 👇 เพิ่มชื่อผู้ใช้ -->
+<div>
+<label class="text-sm font-semibold">ชื่อผู้ใช้</label>
+<input id="username" class="w-full border p-3 rounded-xl" type="text"/>
+</div>
+
+<!-- รหัสผ่าน -->
+<div>
+<label class="text-sm font-semibold">รหัสผ่าน</label>
+<input id="password" class="w-full border p-3 rounded-xl" type="password"/>
+</div>
+
+</div>
+
+<!-- ปุ่มสมัคร -->
+<div class="mt-8">
+<button type="button"
+onclick="checkRegister()"
+class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-green-800 transition">
+สมัครสมาชิก
+</button>
+</div>
+
+</form>
+</div>
+
+
+<!-- ✅ Popup Success -->
+<div id="successPopup"
+class="fixed inset-0 hidden items-center justify-center bg-black/60">
+
+<div class="bg-white rounded-2xl p-10 text-center shadow-2xl">
+
+<div class="text-green-500 text-8xl mb-4 animate-bounce">
+✔
+</div>
+
+<h2 class="text-3xl font-bold text-green-600 mb-2">
+สมัครสมาชิกสำเร็จ!
+</h2>
+
+<p class="text-gray-600 mb-6">
+ยินดีต้อนรับเข้าสู่ระบบ
+</p>
+
+<button onclick="closePopup()"
+class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+ตกลง
+</button>
+
+</div>
+</div>
+
+
+<script>
+function checkRegister() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if(username === "admin" && password === "1234") {
+    document.getElementById("successPopup").classList.remove("hidden");
+    document.getElementById("successPopup").classList.add("flex");
+  } else {
+    alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+  }
+}
+
+function closePopup() {
+  document.getElementById("successPopup").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

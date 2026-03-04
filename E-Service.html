@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f4d3a",
+                        "accent": "#c8a951",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#12201c",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+    <style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header / Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary text-accent rounded-lg">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-primary dark:text-accent text-lg font-bold leading-tight tracking-tight">อบต.เมืองยะลา</h2>
+<p class="text-[10px] text-primary/70 dark:text-slate-300 uppercase tracking-widest font-bold">Mueang Yala SAO</p>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="index.html">หน้าหลัก</a>
+<a class="text-primary dark:text-accent text-sm font-bold border-b-2 border-primary dark:border-accent" href="#">บริการออนไลน์</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="ส่งคำร้อง.html">แจ้งเรื่องร้องเรียน</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#contact-section">ติดต่อเรา</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden sm:block">
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-primary/20">
+<div class="text-primary/60 flex bg-white dark:bg-slate-800 items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-800 focus:ring-0 text-sm placeholder:text-slate-400" placeholder="ค้นหาข้อมูล..." value=""/>
+</div>
+</label>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<div class="px-6 md:px-20 py-8">
+<div class="relative rounded-xl overflow-hidden bg-primary min-h-[300px] flex flex-col justify-center p-8 md:p-16">
+<div class="absolute inset-0 opacity-20" data-alt="Traditional Thai pattern background in dark green">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/40 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h1 class="text-white text-3xl md:text-5xl font-bold leading-tight mb-4">ศูนย์บริการประชาชนออนไลน์</h1>
+<p class="text-accent text-lg md:text-xl font-medium mb-8">E-Service: สะดวก รวดเร็ว โปร่งใส เพื่อชาวเมืองยะลา</p>
+<!-- Search Bar -->
+<div class="bg-white p-2 rounded-xl shadow-xl flex flex-col sm:flex-row gap-2">
+<div class="flex-1 flex items-center px-4 gap-3 border-b sm:border-b-0 sm:border-r border-slate-100">
+<span class="material-symbols-outlined text-primary">search</span>
+<input class="w-full border-none focus:ring-0 text-slate-700 py-3" placeholder="ค้นหาบริการที่ท่านต้องการ..." type="text"/>
+</div>
+<button class="bg-accent hover:bg-accent/90 text-primary font-bold px-8 py-3 rounded-lg transition-all">
+                                ค้นหาบริการ
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Filter -->
+<div class="px-6 md:px-20 mb-8">
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-6 text-sm font-bold shadow-md">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+                        ทั้งหมด
+                    </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-6 text-sm font-medium border border-primary/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-lg">campaign</span>
+                        เรื่องร้องเรียน
+                    </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-6 text-sm font-medium border border-primary/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-lg">description</span>
+                        แบบฟอร์ม
+                    </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-6 text-sm font-medium border border-primary/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-lg">payments</span>
+                        ภาษีและค่าธรรมเนียม
+                    </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-6 text-sm font-medium border border-primary/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+                        ติดตามสถานะ
+                    </button>
+</div>
+</div>
+<!-- Main Services Grid -->
+<div class="px-6 md:px-20 pb-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-primary dark:text-accent flex items-center gap-3">
+<span class="w-8 h-1 bg-accent rounded-full"></span>
+                        บริการยอดนิยม
+                    </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1: Complaint -->
+<div class="group bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all cursor-pointer">
+<div class="size-14 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">emergency_home</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ศูนย์รับเรื่องร้องเรียน</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">แจ้งปัญหาความเดือดร้อน เหตุรำคาญ หรือแจ้งซ่อมแซมสาธารณูปโภคในพื้นที่</p>
+<div class="flex items-center text-primary dark:text-accent font-bold text-sm">
+                            ดำเนินการทันที
+                            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Service 2: Downloads -->
+<div class="group bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all cursor-pointer">
+<div class="size-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">download_for_offline</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ดาวน์โหลดแบบฟอร์ม</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">รวมแบบฟอร์มคำขอต่างๆ ในรูปแบบ PDF สำหรับยื่นต่อนายทะเบียน</p>
+<div class="flex items-center text-primary dark:text-accent font-bold text-sm">
+                            ดาวน์โหลด (PDF)
+                            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Service 3: Tax -->
+<div class="group bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all cursor-pointer">
+<div class="size-14 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ชำระภาษีออนไลน์</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">บริการชำระภาษีที่ดินและสิ่งปลูกสร้าง หรือภาษีป้าย ผ่านระบบ QR Code</p>
+<div class="flex items-center text-primary dark:text-accent font-bold text-sm">
+                            เข้าสู่ระบบชำระเงิน
+                            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Service 4: Status -->
+<div class="group bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all cursor-pointer">
+<div class="size-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">manage_search</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ตรวจสอบสถานะ</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">ติดตามสถานะคำร้องหรือการดำเนินการเอกสารที่ท่านได้ยื่นไว้</p>
+<div class="flex items-center text-primary dark:text-accent font-bold text-sm">
+                            เช็คสถานะปัจจุบัน
+                            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Secondary Services Section -->
+<div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<h3 class="text-xl font-bold text-primary dark:text-accent mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>
+                            ข่าวประชาสัมพันธ์ล่าสุด
+                        </h3>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-lg border border-primary/5 hover:border-primary/20 transition-all">
+<div class="w-24 h-20 rounded bg-slate-100 flex-shrink-0" data-alt="News thumbnail regarding local taxes"></div>
+<div>
+<span class="text-[10px] font-bold text-accent uppercase tracking-wider">ประกาศเทศบาล</span>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-1">ขยายเวลาการชำระภาษีที่ดินและสิ่งปลูกสร้าง ประจำปี 2567</h4>
+<p class="text-sm text-slate-500 line-clamp-1">ประกาศเลื่อนกำหนดวันชำระภาษีออกไปถึงวันที่ 31 กรกฎาคม 2567...</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-lg border border-primary/5 hover:border-primary/20 transition-all">
+<div class="w-24 h-20 rounded bg-slate-100 flex-shrink-0" data-alt="Community service activity photo"></div>
+<div>
+<span class="text-[10px] font-bold text-accent uppercase tracking-wider">ข่าวสังคม</span>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-1">โครงการจัดตั้งศูนย์ช่วยเหลือประชาชนตำบลเมืองยะลา</h4>
+<p class="text-sm text-slate-500 line-clamp-1">เชิญชวนประชาชนลงทะเบียนรับสวัสดิการชุมชน ประจำปีงบประมาณใหม่...</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-slate-800/50 p-6 rounded-xl border border-primary/10">
+<h3 class="text-xl font-bold text-primary dark:text-accent mb-6">สถิติการให้บริการ</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-600 dark:text-slate-400">เรื่องร้องเรียนที่ได้รับ</span>
+<span class="font-bold text-primary">1,245 รายการ</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-accent h-full w-[85%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-600 dark:text-slate-400">ดำเนินการแล้วเสร็จ</span>
+<span class="font-bold text-primary">1,102 รายการ</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[72%]"></div>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-primary/10">
+<p class="text-xs text-slate-500 text-center italic">* ข้อมูล ณ วันที่ 20 พฤษภาคม 2567</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-12 px-6 md:px-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 flex items-center justify-center bg-white text-primary rounded-lg">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h2 class="text-xl font-bold">องค์การบริหารส่วนตำบลเมืองยะลา</h2>
+</div>
+<p class="text-slate-300 text-sm mb-6 max-w-md">
+                        มุ่งมั่นพัฒนาท้องถิ่น ยกระดับคุณภาพชีวิตประชาชนด้วยนวัตกรรมและการบริการที่ทันสมัย โปร่งใส และทั่วถึง
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">language</span>
+</a>
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">call</span>
+</a>
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 id="contact-section" class="text-white font-bold mb-6 text-lg">
+เมนูหลัก
+</h4>
+<ul class="space-y-3 text-slate-300 text-sm">
+<li><a class="hover:text-white" href="#">ข่าวประชาสัมพันธ์</a></li>
+<li><a class="hover:text-white" href="#">แผนพัฒนาตำบล</a></li>
+<li><a class="hover:text-white" href="#">ข้อมูลความโปร่งใส (ITA)</a></li>
+<li><a class="hover:text-white" href="#">จัดซื้อจัดจ้าง</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-accent font-bold mb-6">ติดต่อหน่วยงาน</h4>
+<p class="text-slate-300 text-sm mb-4">
+                        เลขที่ 123 หมู่ 1 ถนนสิโรรส ต.สะเตง <br/>
+                        อ.เมือง จ.ยะลา 95000
+                    </p>
+<p class="text-slate-300 text-sm">
+                        โทร: 073-123-456 <br/>
+                        อีเมล: contact@muangyala.go.th
+                    </p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10 text-center text-slate-400 text-xs">
+                © 2024 Mueang Yala Subdistrict Administrative Organization. All Rights Reserved.
+            </div>
+</footer>
+</div>
+</div>
+</body></html>

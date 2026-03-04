@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f4d3a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#12201c",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-tight">อบต.เมืองยะลา</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a href="index.html" class="hover:text-accent transition">
+    หน้าแรก
+</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">แจ้งเรื่องร้องเรียน</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" 
+   href="ติดตามสถานะ.html">
+   ติดตามสถานะ
+</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center rounded-full size-10 bg-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4">
+<div class="layout-content-container flex flex-col max-w-[800px] flex-1 bg-white dark:bg-slate-900/50 rounded-xl shadow-sm border border-primary/5 p-6 md:p-10">
+<!-- Header Section -->
+<div class="mb-10 text-center md:text-left">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-black leading-tight tracking-tight mb-2">แบบฟอร์มร้องเรียนออนไลน์</h1>
+<p class="text-primary/70 dark:text-primary/90 text-lg font-normal">อบต.เมืองยะลา ยินดีรับเรื่องร้องทุกข์เพื่อพัฒนาชุมชนของเรา</p>
+</div>
+<form class="space-y-8">
+<!-- Section 1: Personal Information -->
+<section>
+<div class="flex items-center gap-2 mb-6 pb-2 border-b border-primary/10">
+<span class="material-symbols-outlined text-primary">person</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">ข้อมูลส่วนตัวผู้แจ้ง</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">ชื่อ-นามสกุล <span class="text-red-500">*</span></span>
+<input class="form-input w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="ชื่อ และ นามสกุล ของท่าน" required="" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">เลขบัตรประจำตัวประชาชน <span class="text-red-500">*</span></span>
+<input class="form-input w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" maxlength="13" placeholder="เลข 13 หลัก" required="" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">เบอร์โทรศัพท์ติดต่อ <span class="text-red-500">*</span></span>
+<input class="form-input w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="08X-XXX-XXXX" required="" type="tel"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">อีเมล (ถ้ามี)</span>
+<input class="form-input w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="example@email.com" type="email"/>
+</label>
+</div>
+</section>
+<!-- Section 2: Complaint Details -->
+<section>
+<div class="flex items-center gap-2 mb-6 pb-2 border-b border-primary/10">
+<span class="material-symbols-outlined text-primary">description</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">รายละเอียดเรื่องร้องเรียน</h2>
+</div>
+<div class="space-y-6">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">ประเภทการร้องเรียน <span class="text-red-500">*</span></span>
+<select class="form-select w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" required="">
+<option disabled="" selected="" value="">เลือกประเภทความเดือดร้อน</option>
+<option value="1">ไฟฟ้าสาธารณะ / แสงสว่าง</option>
+<option value="2">ถนน / ทางเท้า / สิ่งก่อสร้าง</option>
+<option value="3">ขยะ / สิ่งปฏิกูล / กลิ่นไม่พึงประสงค์</option>
+<option value="4">ท่อระบายน้ำ / น้ำท่วมขัง</option>
+<option value="5">เสียงรบกวน</option>
+<option value="6">อื่นๆ</option>
+</select>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">สถานที่เกิดเหตุ / จุดสังเกต <span class="text-red-500">*</span></span>
+<div class="relative">
+<input class="form-input w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary h-12 pl-10" placeholder="ระบุที่อยู่ หรือ จุดเช็คอินที่เกิดเหตุ" required="" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">location_on</span>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">รายละเอียดข้อร้องเรียน <span class="text-red-500">*</span></span>
+<textarea class="form-textarea w-full rounded-lg border-primary/20 bg-background-light dark:bg-slate-800 focus:border-primary focus:ring-primary p-4" placeholder="กรุณาอธิบายรายละเอียดความเดือดร้อนของท่านโดยสังเขป" required="" rows="4"></textarea>
+</label>
+</div>
+</section>
+<!-- Section 3: Evidence Upload -->
+<section>
+<div class="flex items-center gap-2 mb-6 pb-2 border-b border-primary/10">
+<span class="material-symbols-outlined text-primary">add_a_photo</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">แนบไฟล์หลักฐาน</h2>
+</div>
+<div id="upload-box" class="flex flex-col items-center justify-center border-2 border-dashed border-primary/30 rounded-xl p-8 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer group">
+<input accept="image/*" class="hidden" id="file-upload" multiple="" type="file"/>
+<label class="flex flex-col items-center cursor-pointer" for="file-upload">
+<span class="material-symbols-outlined text-4xl text-primary mb-2 group-hover:scale-110 transition-transform">cloud_upload</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">คลิกเพื่ออัปโหลดภาพถ่าย</span>
+<span class="text-slate-500 text-sm">สูงสุด 5 ไฟล์ (ขนาดไม่เกิน 5MB ต่อไฟล์)</span>
+</label>
+</div>
+<div id="preview" class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6"></div>
+</section>
+<!-- Section 4: Terms and Submission -->
+<section class="space-y-6 pt-6 border-t border-primary/10">
+<label class="flex gap-3 cursor-pointer">
+<input class="form-checkbox rounded border-primary/30 text-primary focus:ring-primary mt-1" required="" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300">
+                                    ข้าพเจ้ายอมรับ <a class="text-primary font-bold underline" href="#">นโยบายความเป็นส่วนตัว</a> และยืนยันว่าข้อมูลที่แจ้งเป็นความจริงทุกประการ โดยยินยอมให้ อบต.เมืองยะลา ตรวจสอบและดำเนินการตามขั้นตอนต่อไป
+                                </span>
+</label>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-primary text-white font-bold py-4 rounded-lg hover:bg-primary/90 transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">send</span>
+                                    ส่งเรื่องร้องเรียน
+                                </button>
+<button class="px-8 py-4 border border-primary/30 text-primary font-bold rounded-lg hover:bg-primary/5 transition-all" type="reset">
+                                    ล้างข้อมูล
+                                </button>
+</div>
+</section>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white/80 py-8 px-6 text-center">
+<p class="text-sm">© 2024 องค์การบริหารส่วนตำบลเมืองยะลา. สงวนลิขสิทธิ์.</p>
+<p class="text-xs mt-2 opacity-60">สำนักงานองค์การบริหารส่วนตำบลเมืองยะลา จ.ยะลา 95000 | โทร: 073-123-456</p>
+</footer>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const fileInput = document.getElementById("file-upload");
+    const uploadBox = document.getElementById("upload-box");
+    const placeholder = document.getElementById("upload-placeholder");
+
+    
+
+    let selectedFiles = [];
+
+    fileInput.addEventListener("click", function () {
+    this.value = "";
+});
+
+    fileInput.addEventListener("change", function () {
+
+        const newFiles = Array.from(this.files);
+
+        newFiles.forEach(file => {
+            if (selectedFiles.length < 5 && file.type.startsWith("image/") && file.size <= 5 * 1024 * 1024) {
+                selectedFiles.push(file);
+            }
+        });
+
+        renderPreview();
+        fileInput.value = "";
+    });
+
+    function renderPreview() {
+
+        uploadBox.innerHTML = "";
+
+        const grid = document.createElement("div");
+        grid.className = "grid grid-cols-2 md:grid-cols-3 gap-4 w-full";
+
+        selectedFiles.forEach((file, index) => {
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+
+                const wrapper = document.createElement("div");
+                wrapper.className = "relative";
+
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.className = "w-full h-32 object-cover rounded-lg shadow";
+
+                const removeBtn = document.createElement("button");
+                removeBtn.innerHTML = "✕";
+                removeBtn.className = "absolute top-1 right-1 bg-red-600 text-white text-xs px-2 py-1 rounded-full";
+                removeBtn.onclick = function () {
+                selectedFiles.splice(index, 1);
+                renderPreview();
+                fileInput.value = ""; // ✅ เพิ่มบรรทัดนี้
+                };
+
+                wrapper.appendChild(img);
+                wrapper.appendChild(removeBtn);
+                grid.appendChild(wrapper);
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        uploadBox.appendChild(grid);
+
+        
+
+        uploadBox.appendChild(resetBtn);
+    }
+
+});
+</script>
+
+
+
+</body></html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const idCardInput = document.querySelector('input[placeholder="เลข 13 หลัก"]');
+    const phoneInput = document.querySelector('input[type="tel"]');
+
+    let selectedFiles = [];
+
+    // บังคับให้กรอกเฉพาะตัวเลข
+    idCardInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 13);
+    });
+
+    phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (idCardInput.value.length !== 13) {
+            alert("กรุณากรอกเลขบัตรประชาชนให้ครบ 13 หลัก");
+            idCardInput.focus();
+            return;
+        }
+
+        if (phoneInput.value.length !== 10) {
+            alert("กรุณากรอกเบอร์โทรศัพท์ให้ครบ 10 หลัก");
+            phoneInput.focus();
+            return;
+        }
+
+        // ===== Popup =====
+        const popup = document.createElement("div");
+        popup.className = "fixed inset-0 bg-black/50 flex items-center justify-center z-50";
+
+        popup.innerHTML = `
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-xl text-center shadow-lg max-w-sm w-full">
+                <span class="material-symbols-outlined text-green-600 text-5xl mb-4">check_circle</span>
+                <h2 class="text-xl font-bold mb-2">ส่งคำร้องเสร็จสิ้นแล้ว</h2>
+                <p class="text-slate-600 dark:text-slate-300 mb-6">
+                    เจ้าหน้าที่จะดำเนินการตรวจสอบและติดต่อกลับโดยเร็วที่สุด
+                </p>
+                <button class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90">
+                    ปิด
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(popup);
+
+        popup.querySelector("button").addEventListener("click", () => {
+    popup.remove();
+    form.reset();
+
+    // ✅ ล้างรูปภาพด้วย
+    selectedFiles = [];
+
+    const uploadBox = document.getElementById("upload-box");
+    uploadBox.innerHTML = `
+        <input accept="image/*" class="hidden" id="file-upload" multiple type="file"/>
+        <label class="flex flex-col items-center cursor-pointer" for="file-upload">
+            <span class="material-symbols-outlined text-4xl text-primary mb-2">cloud_upload</span>
+            <span class="font-bold">คลิกเพื่ออัปโหลดภาพถ่าย</span>
+            <span class="text-sm text-slate-500">สูงสุด 5 ไฟล์ (ขนาดไม่เกิน 5MB ต่อไฟล์)</span>
+        </label>
+    `;
+});
+    });
+});
+</script>

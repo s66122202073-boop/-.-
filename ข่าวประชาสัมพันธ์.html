@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f4d3a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#12201c",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 lg:px-40 py-4 bg-white dark:bg-background-dark/50 sticky top-0 z-50 backdrop-blur-md">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-primary text-lg font-bold leading-tight tracking-tight">อบต.เมืองยะลา</h2>
+<span class="text-[10px] uppercase tracking-widest opacity-70">Mueang Yala SAO</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" 
+   href="index.html">
+   หน้าแรก
+</a>
+<a class="text-primary text-sm font-semibold border-b-2 border-primary" href="#">ข่าวสาร</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">จัดซื้อจัดจ้าง</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-primary/20 bg-white dark:bg-slate-800">
+<div class="text-primary/60 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 h-full placeholder:text-slate-400 px-3 text-sm" placeholder="ค้นหาข่าวสาร..."/>
+</div>
+</label>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/10" data-alt="User profile avatar small circle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgNRo9Z0RWyf5wHcf-dZyxC3_HM2XgXxt5wnBKYwVdwKxc0hJgbsae0a5IF8f7OzZNmyNSncTTvEHolOX9rRMUo8CfAWbFw5qhkUQp8C7kpcUGaYrfSoR7RZSkDHD5rtXAAO43ELB0MPG9JP3ng8uLLB8ICswGoWQyBuqGVW-VhMFXp8p-tQwbhkrR7JyoDxknDbJRqG05sFIR_3z9CAJtrbGZIcZppKCtu0fCwdya91aQdqRs7OfsEA5lnNHudHESIhHuGuGpPm0");'></div>
+</div>
+</header>
+<!-- Main Content Wrapper -->
+<main class="flex-1 px-6 md:px-20 lg:px-40 py-8">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6 items-center">
+<a class="text-primary/70 text-sm font-medium hover:text-primary" href="#">หน้าแรก</a>
+<span class="material-symbols-outlined text-sm text-primary/40">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100 text-sm font-semibold">ข่าวประชาสัมพันธ์</span>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-black leading-tight tracking-tight">ข่าวประชาสัมพันธ์และประกาศ</h1>
+<p class="text-primary font-medium">องค์การบริหารส่วนตำบลเมืองยะลา จังหวัดยะลา</p>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-2 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 text-white text-sm font-semibold shadow-md shadow-primary/20">
+                    ทั้งหมด
+                </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-6 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-primary/5 transition-colors">
+                    ข่าวทั่วไป
+                </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-6 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-primary/5 transition-colors">
+                    กิจกรรม
+                </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-6 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-primary/5 transition-colors">
+                    ประกาศ
+                </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-6 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-primary/5 transition-colors">
+                    ข่าวประกวดราคา
+                </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- News List -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- News Item 1 -->
+<div class="group flex flex-col md:flex-row gap-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:shadow-md transition-shadow">
+<div class="w-full md:w-56 shrink-0 bg-center bg-no-repeat aspect-[4/3] md:aspect-square bg-cover rounded-lg overflow-hidden" data-alt="Meeting of local government officials in Thailand" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNupVb48ZXBD5zWhk1LuhAtG__LtghJHv0ii23Yj7VD8NLl7-ql-_PWexyNY5tfs4n5LFrQT2Z2mGVfNgIQdCbU3TMvIFCBjIuUJPfnc_dqy7lsfGxqWPCBwovmymL4l3RKg6dQEiys6rR7q4Lyg-Ac8O0kSrz6DzRS6vkvnLi6PZlwFkszGpnERWHXSdLdhrgXeUvFhvJzXykrKkiMhQCjqhcf4uslfcZ5YzIYZbakIjTOGPJRF1IueKDo9vzHARjAJnvIZdJHXk");'>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">ข่าวทั่วไป</span>
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span> 15 ต.ค. 2567
+                                    </span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    อบต.เมืองยะลา ประชุมสภาสมัยสามัญ ครั้งที่ 1 ประจำปี 2567 เพื่อหารือแนวทางพัฒนาท้องถิ่น
+                                </h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">
+                                    สรุปประเด็นสำคัญจากการประชุมสภาสมัยสามัญ ครั้งที่ 1 ประจำปี พ.ศ. 2567 เกี่ยวกับการพิจารณาร่างข้อบัญญัติงบประมาณรายจ่ายประจำปี และโครงการก่อสร้างถนนคอนกรีตเสริมเหล็กในพื้นที่หมู่บ้าน...
+                                </p>
+</div>
+<div class="mt-4">
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                                    อ่านเพิ่มเติม <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="group flex flex-col md:flex-row gap-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:shadow-md transition-shadow">
+<div class="w-full md:w-56 shrink-0 bg-center bg-no-repeat aspect-[4/3] md:aspect-square bg-cover rounded-lg overflow-hidden" data-alt="Community health checkup event in a Thai village" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDffa_YlGcLkG1FPFjaaet4ND_cS81vbXcjyz3AfYYJ04ECwzawCRnFCRBgMtIUG0UBDEC1PdAoU3Y9rvq1NnaNFQLcSDI4Yaw2rjQnHEcrjNk4uqr1NSfhITJtUadGjlUVQzRXLXNWxL646syRv9-vFVkRO5keyJk1V1ClrXlkVfpA_MeS-MOUoXR23VW-Yt6l0pTrFbT9-M0yktG8J1Zv8AKjfUcox7sSFR9cZrmiuouoM4vf6Hp_1ThVLjeHKPnyZEuvrFR3ggs");'>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase">กิจกรรม</span>
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span> 12 ต.ค. 2567
+                                    </span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    โครงการตรวจสุขภาพเคลื่อนที่ "เพื่อชาวเมืองยะลา สุขภาพดีถ้วนหน้า" ประจำเดือนตุลาคม
+                                </h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">
+                                    เชิญชวนพี่น้องชาวตำบลเมืองยะลาเข้ารับบริการตรวจสุขภาพเบื้องต้น ตรวจคัดกรองเบาหวานและความดันโลหิตสูง โดยหน่วยแพทย์เคลื่อนที่ อบต.เมืองยะลา ณ ศาลาเอนกประสงค์...
+                                </p>
+</div>
+<div class="mt-4">
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                                    อ่านเพิ่มเติม <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="group flex flex-col md:flex-row gap-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:shadow-md transition-shadow">
+<div class="w-full md:w-56 shrink-0 bg-center bg-no-repeat aspect-[4/3] md:aspect-square bg-cover rounded-lg overflow-hidden" data-alt="Legal documents and gavel representing government announcements" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBz8lrB-op9zrrz4OhgE_JImuDzzcbTRa-Zh22Y6-XTZ1tuO0Q5I5wc7tDGKtnxQF5KmlMy-2ddDKnnMqJDW-NSb0MrdKjtGtXCByA0yQL2ka9yHqcLJlCfPcMO3Gsx893vNO-y6cmYM-LuuNk9pxlYOu029txg7BtblD1duPI-W0qJbeMY5jVsDz1sJlCIS9KGl2BXV91dkys2z8y7EWFL63K4NLhhG--n2ac8XjtN3gLc34B4Pp5zWDfRU3IWFNnaRJk8duVRQUg");'>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 bg-orange-100 text-orange-700 text-[10px] font-bold rounded uppercase">ประกาศ</span>
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span> 10 ต.ค. 2567
+                                    </span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    ประกาศรายชื่อผู้มีสิทธิ์รับเบี้ยยังชีพผู้สูงอายุและคนพิการ รายใหม่ ประจำปีงบประมาณ 2568
+                                </h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">
+                                    งานสวัสดิการสังคม อบต.เมืองยะลา ขอประกาศรายชื่อผู้มีคุณสมบัติครบถ้วนและมีสิทธิ์ได้รับเงินเบี้ยยังชีพผู้สูงอายุและคนพิการ ซึ่งได้ยื่นคำขอลงทะเบียนไว้ในระหว่างเดือน...
+                                </p>
+</div>
+<div class="mt-4">
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                                    อ่านเพิ่มเติม <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- News Item 4 -->
+<div class="group flex flex-col md:flex-row gap-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 hover:shadow-md transition-shadow">
+<div class="w-full md:w-56 shrink-0 bg-center bg-no-repeat aspect-[4/3] md:aspect-square bg-cover rounded-lg overflow-hidden" data-alt="Construction site representing public tender works" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUOru2zSY4c5p81_Oe7UbocHu2AQjqBhPHZ9GxHv1MOxoqJ4a_sY6eNXYME1PS2zKDfQT-xkK-2orUvdZllRyBsvAcBBjMZcqnHFVmgTNyD6ISgbHFnb_OzaAGNT1kAl6C82h0SWVIfJrExUvKCtejCVkqWLNy74BYkq1W_u3Tf9def6NQVoQ4vRUbMX5Nl9-NTrrOFlLn8OHmmpyqoqUzSYZmJyAug9qBiqI9GKoO5ABqzI01ApXqZ5fR1r8WoMiQSGZJYSINRS8");'>
+</div>
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-[10px] font-bold rounded uppercase">ข่าวประกวดราคา</span>
+<span class="text-slate-400 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span> 08 ต.ค. 2567
+                                    </span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                                    ประกวดราคาจ้างก่อสร้างถนนลาดยางแอสฟัลท์ติกคอนกรีต สายบ้านคลองน้ำใส หมู่ที่ 4
+                                </h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">
+                                    ด้วยวิธีประกวดราคาอิเล็กทรอนิกส์ (e-bidding) ราคากลางของงานจ้างในการประกวดราคาครั้งนี้เป็นเงินทั้งสิ้น 2,450,000.00 บาท ผู้สนใจสามารถยื่นข้อเสนอผ่านระบบ...
+                                </p>
+</div>
+<div class="mt-4">
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                                    อ่านเพิ่มเติม <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-2 mt-10">
+<button class="size-10 flex items-center justify-center rounded-lg border border-primary/10 bg-white dark:bg-slate-800 text-slate-400 hover:text-primary transition-colors disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-primary/10 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-primary/5">2</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-primary/10 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-primary/5">3</button>
+<span class="text-slate-400 px-1">...</span>
+<button class="size-10 flex items-center justify-center rounded-lg border border-primary/10 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-primary/5">12</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-primary/10 bg-white dark:bg-slate-800 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 flex flex-col gap-8">
+<!-- Recent News Widget -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 overflow-hidden">
+<div class="bg-primary/5 border-b border-primary/10 px-6 py-4">
+<h4 class="text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">history</span> ข่าวสารล่าสุด
+                            </h4>
+</div>
+<div class="p-2">
+<a class="flex gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors group" href="#">
+<div class="size-16 shrink-0 rounded-md bg-center bg-cover" data-alt="Abstract green pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS8S-WDeRPYxxjMxZieaJUIzujnW4pEREojsyztUK10HDcYEsBIRwt54LnD4DANLJ_WQOOZvODJEWNllgURbrzPhpWKDOVkSz_YzgeDPvcmWzpqvlPT4Rp3fUV-76BdfckZhb9JU3Hv0jN0GnLJEJrZlyIxvnyYv_JAj8ENWseb4L-juNqTnkv0xzNiVL8jnUkYOhMjZPcCqUxIqCTRVU7QVeBWSqUzi8PFOakeQ5RcXR6mwbLjPifdzPh-ftv2F-mrSe7UBx2hD0");'></div>
+<div class="flex flex-col gap-1">
+<h5 class="text-slate-800 dark:text-slate-200 text-xs font-bold leading-tight line-clamp-2 group-hover:text-primary">รายงานผลการปฏิบัติงานรอบ 6 เดือน แรก...</h5>
+<span class="text-[10px] text-slate-400">16 ต.ค. 2567</span>
+</div>
+</a>
+<div class="h-px bg-primary/5 mx-4"></div>
+<a class="flex gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors group" href="#">
+<div class="size-16 shrink-0 rounded-md bg-center bg-cover" data-alt="People collaborating in a modern office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8Wy2M87unaBQg8ss7D-lb5hS9tp3Rvb4OWUC4W8KQhK7KqJepvdXj6Uuj_xA_gyw1qFnro4PkrcdAbgL8CBUvdwLeLhEIEL9ZsJ8q3aQDf2STN6weRGvGa7jOS0vPhggW3LRp4OmCvVumL-o0XN9UOfcWIe-zNhxXoKQT-yr30DP3mtlJPactyYtDY94eL3_dLBhcrDy-ZrAz1qAwUY2ACDELQdtavUMjbJCaDbfqHY0LvVTA9LNP-gxXeRnNxJeV8iy1UG3MGXw");'></div>
+<div class="flex flex-col gap-1">
+<h5 class="text-slate-800 dark:text-slate-200 text-xs font-bold leading-tight line-clamp-2 group-hover:text-primary">ประชุมคณะกรรมการบริหารกองทุนฯ สปสช....</h5>
+<span class="text-[10px] text-slate-400">14 ต.ค. 2567</span>
+</div>
+</a>
+<div class="h-px bg-primary/5 mx-4"></div>
+<a class="flex gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors group" href="#">
+<div class="size-16 shrink-0 rounded-md bg-center bg-cover" data-alt="Conference room setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLeyarxM6K-j73ecPa-038uqpAU1fGJqB3T7foq10tEDKfDNyYkTJk3JMgfYm7ZKGkaibMoqeCZjtzIQ63wzYrvRM_QIaVexdzt57RRff6eByANbjVOwBrv7tA1Uz-0KIvDk9Gkt52E-ZNb99fRng3UIzIegOSbbjkyvTGxh2LewMxFTzcQGecdaOpk7O4gzpo63Fby_CkTQOV9Sn-UULg2Rxbq-_rhF3DkOLpog5xo9Fkz7QaVD5gnsS3Onfl99hsgstsSz_8jZg");'></div>
+<div class="flex flex-col gap-1">
+<h5 class="text-slate-800 dark:text-slate-200 text-xs font-bold leading-tight line-clamp-2 group-hover:text-primary">สรุปผลการประเมินความพึงพอใจการบริการ...</h5>
+<span class="text-[10px] text-slate-400">12 ต.ค. 2567</span>
+</div>
+</a>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-900/50 text-center">
+<a class="text-xs font-bold text-primary hover:underline" href="#">ดูข่าวทั้งหมด</a>
+</div>
+</div>
+<!-- Statistics / Info Cards -->
+<div class="flex flex-col gap-4">
+<div class="bg-primary p-6 rounded-xl text-white shadow-lg shadow-primary/20">
+<h4 class="font-bold mb-2">สอบถามข้อมูลเพิ่มเติม</h4>
+<p class="text-sm opacity-80 mb-4">ฝ่ายประชาสัมพันธ์ อบต.เมืองยะลา เปิดให้บริการในวันและเวลาราชการ</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-base">call</span> 073-XXX-XXX
+                                </div>
+<div class="flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-base">mail</span> contact@mueangyala.go.th
+                                </div>
+</div>
+</div>
+<!-- Calendar Widget -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 p-6">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event</span> ปฏิทินกิจกรรม
+                            </h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary/10 text-primary flex flex-col items-center justify-center rounded font-bold">
+<span class="text-[10px] leading-none uppercase">ต.ค.</span>
+<span class="text-lg leading-none">20</span>
+</div>
+<div class="text-xs">
+<div class="font-bold text-slate-800 dark:text-slate-200">ประชุมสัญจรหมู่ที่ 3</div>
+<div class="text-slate-400">09:00 - 12:00 น.</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary/10 text-primary flex flex-col items-center justify-center rounded font-bold">
+<span class="text-[10px] leading-none uppercase">ต.ค.</span>
+<span class="text-lg leading-none">25</span>
+</div>
+<div class="text-xs">
+<div class="font-bold text-slate-800 dark:text-slate-200">กิจกรรมจิตอาสาพัฒนาฯ</div>
+<div class="text-slate-400">08:30 - 16:30 น.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white mt-12 py-12 px-6 md:px-20 lg:px-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="size-10">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight">อบต.เมืองยะลา</h2>
+</div>
+<p class="text-sm opacity-80 leading-relaxed">
+                        องค์การบริหารส่วนตำบลเมืองยะลา มุ่งมั่นพัฒนาท้องถิ่น เสริมสร้างความเข้มแข็งของชุมชน และยกระดับคุณภาพชีวิตของประชาชนอย่างยั่งยืน
+                    </p>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-lg">เมนูหลัก</h3>
+<ul class="flex flex-col gap-2 text-sm opacity-80">
+<li><a class="hover:underline" href="#">หน้าแรก</a></li>
+<li><a class="hover:underline" href="#">โครงสร้างหน่วยงาน</a></li>
+<li><a class="hover:underline" href="#">แผนพัฒนาท้องถิ่น</a></li>
+<li><a class="hover:underline" href="#">ดาวน์โหลดแบบฟอร์ม</a></li>
+<li><a class="hover:underline" href="#">ติดต่อเรา</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-lg">ติดต่อเรา</h3>
+<div class="flex flex-col gap-3 text-sm opacity-80">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>เลขที่ XX หมู่ที่ X ตำบลเมืองยะลา อำเภอเมือง จังหวัดยะลา 95000</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>โทรศัพท์: 073-XXX-XXX</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">social_leaderboard</span>
+<span>องค์การบริหารส่วนตำบลเมืองยะลา</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60">
+<p>© 2024 องค์การบริหารส่วนตำบลเมืองยะลา. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">นโยบายความเป็นส่วนตัว</a>
+<a class="hover:underline" href="#">ข้อกำหนดและเงื่อนไข</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

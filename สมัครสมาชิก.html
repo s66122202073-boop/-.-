@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ลงทะเบียนผู้ใช้งานใหม่ - อบต.เมืองยะลา</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0F4C3A", // Deep Green
+                        "secondary": "#C8A951", // Gold
+                        "background-light": "#FDFBF7", // Light Cream
+                        "background-dark": "#121C17",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header / Nav -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary shadow-lg">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<div>
+<h1 class="text-primary dark:text-secondary font-bold text-lg leading-tight">อบต.เมืองยะลา</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Mueang Yala Subdistrict Administrative Organization</p>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6 text-sm font-semibold">
+<a class="text-primary hover:text-secondary transition-colors" href="#">หน้าแรก</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">ข่าวสาร</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">บริการประชาชน</a>
+</nav>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-primary/20 hover:bg-primary/5 transition-all text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">language</span>
+                        TH/EN
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 py-12">
+<!-- Title Section -->
+<div class="text-center mb-10">
+<h2 class="text-3xl md:text-4xl font-black text-primary dark:text-secondary mb-2">ลงทะเบียนผู้ใช้งานใหม่</h2>
+<p class="text-slate-600 dark:text-slate-400">เข้าถึงบริการภาครัฐออนไลน์ขององค์การบริหารส่วนตำบลเมืองยะลา</p>
+</div>
+<!-- Digital ID Option -->
+<div class="mb-8 p-6 bg-primary/5 dark:bg-primary/10 rounded-xl border-2 border-dashed border-primary/20 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-3xl">fingerprint</span>
+</div>
+<div>
+<h3 class="font-bold text-primary dark:text-secondary">สมัครผ่าน Digital ID (ThaiID)</h3>
+<p class="text-sm text-slate-500">สะดวกรวดเร็ว ไม่ต้องกรอกข้อมูลส่วนตัว</p>
+</div>
+</div>
+<button class="w-full md:w-auto bg-[#1C5D99] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">verified_user</span>
+                ลงทะเบียนด้วย ThaiID
+            </button>
+</div>
+<div class="relative flex items-center mb-8">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-slate-400 text-sm font-medium uppercase">หรือกรอกข้อมูลด้านล่าง</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<!-- Registration Form -->
+<form id="registerForm" class="bg-white dark:bg-slate-900 shadow-xl rounded-2xl p-8 border border-slate-100 dark:border-slate-800">
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div class="md:col-span-2">
+<h3 class="text-lg font-bold text-primary border-b pb-2">ข้อมูลส่วนบุคคล</h3>
+</div>
+
+<div>
+<label class="text-sm font-semibold">ชื่อ-นามสกุล</label>
+<input required class="w-full rounded-xl p-3 border" type="text"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">เลขบัตรประชาชน (13 หลัก)</label>
+<input id="citizenId" maxlength="13" required class="w-full rounded-xl p-3 border" type="text"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">วันเกิด</label>
+<input required class="w-full rounded-xl p-3 border" type="date"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">เบอร์โทรศัพท์</label>
+<input id="phone" maxlength="10" required class="w-full rounded-xl p-3 border" type="text"/>
+</div>
+
+<div class="md:col-span-2 mt-4">
+<h3 class="text-lg font-bold text-primary border-b pb-2">ที่อยู่ตามทะเบียนบ้าน</h3>
+</div>
+
+<div>
+<label class="text-sm font-semibold">ตำบล</label>
+<select required class="w-full rounded-xl p-3 border">
+<option value="">เลือกตำบล</option>
+<option>สะเตงนอก</option>
+<option>บุดี</option>
+<option>เปาะเส้ง</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm font-semibold">อำเภอ</label>
+<input readonly value="เมืองยะลา" class="w-full rounded-xl p-3 border bg-gray-100"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">จังหวัด</label>
+<input readonly value="ยะลา" class="w-full rounded-xl p-3 border bg-gray-100"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">รหัสไปรษณีย์</label>
+<input id="postcode" maxlength="5" required class="w-full rounded-xl p-3 border" type="text"/>
+</div>
+
+<div class="md:col-span-2 mt-4">
+<h3 class="text-lg font-bold text-primary border-b pb-2">ความปลอดภัยของบัญชี</h3>
+</div>
+
+<div class="md:col-span-2">
+<label class="text-sm font-semibold">อีเมล</label>
+<input required type="email" class="w-full rounded-xl p-3 border"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">รหัสผ่าน</label>
+<input id="password" required minlength="8" type="password" class="w-full rounded-xl p-3 border"/>
+</div>
+
+<div>
+<label class="text-sm font-semibold">ยืนยันรหัสผ่าน</label>
+<input id="confirmPassword" required type="password" class="w-full rounded-xl p-3 border"/>
+</div>
+
+<div class="md:col-span-2 mt-4">
+<label class="flex items-start gap-2">
+<input id="terms" type="checkbox" required/>
+<span class="text-sm">ฉันยอมรับข้อกำหนดและเงื่อนไข</span>
+</label>
+</div>
+
+</div>
+
+<div class="mt-10">
+<button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-secondary hover:text-primary transition-all">
+ลงทะเบียน
+</button>
+</div>
+
+</form>
+</main>
+
+<!-- Popup -->
+<div id="successPopup" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+<div class="bg-white rounded-2xl p-8 text-center shadow-2xl max-w-sm w-full">
+<h3 class="text-2xl font-bold text-primary mb-4">สมัครสำเร็จ 🎉</h3>
+<p class="text-slate-600 mb-6">ระบบได้บันทึกข้อมูลของคุณเรียบร้อยแล้ว</p>
+ <a href="เข้าสู่ระบบ.html"
+   class="bg-primary text-white px-4 py-2 rounded-lg w-full font-semibold text-center block">
+   ปิด
+</a>
+</button>
+</div>
+</div>
+
+<script>
+const citizenId = document.getElementById("citizenId");
+const phone = document.getElementById("phone");
+const postcode = document.getElementById("postcode");
+const form = document.getElementById("registerForm");
+const popup = document.getElementById("successPopup");
+
+function allowOnlyNumbers(input) {
+input.addEventListener("input", function () {
+this.value = this.value.replace(/[^0-9]/g, "");
+});
+}
+
+allowOnlyNumbers(citizenId);
+allowOnlyNumbers(phone);
+allowOnlyNumbers(postcode);
+
+form.addEventListener("submit", function(e){
+e.preventDefault();
+
+if(citizenId.value.length !== 13){
+alert("เลขบัตรประชาชนต้องครบ 13 หลัก");
+return;
+}
+
+if(phone.value.length !== 10){
+alert("เบอร์โทรศัพท์ต้องครบ 10 หลัก");
+return;
+}
+
+if(postcode.value.length !== 5){
+alert("รหัสไปรษณีย์ต้องครบ 5 หลัก");
+return;
+}
+
+if(document.getElementById("password").value !== document.getElementById("confirmPassword").value){
+alert("รหัสผ่านไม่ตรงกัน");
+return;
+}
+
+if(!document.getElementById("terms").checked){
+alert("กรุณายอมรับเงื่อนไข");
+return;
+}
+
+popup.classList.remove("hidden");
+popup.classList.add("flex");
+form.reset();
+});
+
+function closePopup(){
+popup.classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>เกี่ยวกับเรา - อบต.เมืองยะลา</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f4d3a",
+                        "secondary": "#C8A951",
+                        "background-light": "#fdfcf7",
+                        "background-dark": "#12201c",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+
+     <style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<!-- Header / TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<div>
+<h1 class="text-primary dark:text-slate-100 text-lg font-bold leading-none">อบต.เมืองยะลา</h1>
+<p class="text-xs text-primary/70 dark:text-slate-400 mt-1 uppercase tracking-wider">Mueang Yala Subdistrict</p>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-slate-100 text-sm font-semibold hover:text-secondary transition-colors" href="index.html">หน้าแรก</a>
+<a class="text-secondary text-sm font-bold border-b-2 border-secondary pb-1" href="#">เกี่ยวกับเรา</a>
+<a class="text-primary dark:text-slate-100 text-sm font-semibold hover:text-secondary transition-colors" href="#executive">คณะผู้บริหาร</a>
+<a class="text-primary dark:text-slate-100 text-sm font-semibold hover:text-secondary transition-colors" href="แผนพัฒนา.html">แผนพัฒนา</a>
+<a href="#contact" class="text-slate-600 hover:text-primary transition-colors">
+ติดต่อเรา
+</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center gap-2 bg-primary/5 dark:bg-primary/20 px-3 py-1.5 rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<span class="text-sm text-primary/60">ค้นหา...</span>
+</button>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-md">
+<span class="material-symbols-outlined text-lg">language</span>
+                        TH/EN
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[450px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-primary/40 z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10"></div>
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Panoramic view of Yala city landmarks and green landscapes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHvaDY9RoPbSfr648Qx7ANRKU-ut6uACLnToKJORGQkzOGhtpN13ufdCJjQmb879_hEdUuhQWq96DonY61yKXsCH6hykzVzjw0H7GxdMCD-F8WvWPuSx4oo1zrI6UUXnxOB_qWQzU8VQ2-j1QTRqDOqjGWX7QbYfmHNcLlvkRiF_iZPq8_u8PZxY8OSxZSIZO8EDQz6yiPElJEdFHM2LWaS_9EEFrYDLOlDR-_TMPYSti8fWAwwF24NN2XyDQ_SIEKmQAgP3y6biA');"></div>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<h2 class="text-secondary font-bold text-xl mb-4 tracking-widest uppercase">องค์การบริหารส่วนตำบลเมืองยะลา</h2>
+<h1 class="text-white text-5xl md:text-6xl font-black mb-6 drop-shadow-lg">เกี่ยวกับเรา (About Us)</h1>
+<p class="text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                มุ่งมั่นพัฒนาท้องถิ่น เสริมสร้างคุณภาพชีวิต พลิกโฉมการบริหารสู่เมืองอัจฉริยะที่ยั่งยืน
+            </p>
+</div>
+</section>
+<!-- Vision & Mission -->
+<section class="py-20 max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black text-primary dark:text-slate-100 mb-2">วิสัยทัศน์และพันธกิจ</h2>
+<div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl border border-primary/5 shadow-xl shadow-primary/5 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">visibility</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">วิสัยทัศน์ (Vision)</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed italic">"เมืองน่าอยู่ เกษตรมั่งคั่ง ยั่งยืนด้วยหลักธรรมาภิบาล และเทคโนโลยีที่ทันสมัย"</p>
+</div>
+<div class="bg-primary text-white p-8 rounded-xl shadow-xl shadow-primary/20 flex flex-col items-center text-center scale-105">
+<div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">พันธกิจ (Mission)</h3>
+<ul class="text-white/90 text-sm space-y-3 text-left list-disc pl-4">
+<li>พัฒนาโครงสร้างพื้นฐานให้ครอบคลุมและมีมาตรฐาน</li>
+<li>ส่งเสริมอาชีพและยกระดับรายได้เกษตรกรอย่างยั่งยืน</li>
+<li>อนุรักษ์ทรัพยากรธรรมชาติและสิ่งแวดล้อม</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl border border-primary/5 shadow-xl shadow-primary/5 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">military_tech</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">ค่านิยม (Core Values)</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">ความซื่อสัตย์ โปร่งใส ใส่ใจประชาชน พร้อมรับใช้สังคมด้วยความเป็นธรรม</p>
+</div>
+</div>
+</section>
+<!-- Executive Leadership -->
+<section id="executive" class="bg-primary/5 dark:bg-primary/10 py-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black text-primary dark:text-white mb-2">คณะผู้บริหาร</h2>
+<div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="flex flex-col items-center mb-12">
+<div class="group relative bg-white dark:bg-background-dark p-4 rounded-2xl shadow-lg border-2 border-secondary/20 max-w-xs text-center">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-4">
+<img class="w-full h-full object-cover" data-alt="Portrait of the Mayor in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkNS51uiuxYFnJsdI-y8iSzcaGNuymU-L3lVOZa5FemeOl036FwtKLG9eQOc65nBOgt4dUFDDQAlzBdFSQhks2oH7Cr12cc6mgO6yMNqb-mJkBPfYl3mwWv4Xxudys56bTSz0uaBTHTpza-YTKeKhwbUr2zpKADh_5wBJTxlqtsKxVoilCyhZNlXrJI5XwPMBf02Mlo1XNmeZSmQ-DIJPziBI9xFyhbaGk8SjbqWUVluIeGAk9WUusacRQG4Uir5nWbmI1F36Hj5U"/>
+</div>
+<h4 class="text-lg font-bold text-primary">นายก อบต. เมืองยะลา</h4>
+<p class="text-slate-500 text-sm">ตำแหน่ง นายกองค์การบริหารส่วนตำบล</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-background-dark p-3 rounded-xl shadow-md text-center border border-primary/5">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of Deputy Mayor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDWR3RaxVM7r8kv4zDGzcss66aSlHsewr6G_zJQ2mamCePFelqZc2fKqEGyWZcXQt-6Djc4CEYXrkayInX4g2YpuR9goG9rdIVzA6ifsAL2GkbweSq03AlXTsXgHA2skJ05J2EymcAIdjH9_DMD-7gu-1pXAY-vkqaX7mZ57W5HWwe_EAJLTTkpWueomhl7bbyNuSIdK4QDugbi10lnmCNtguh28gRRFTu6-1Kk3ATZtYWH2Wz4R6Ug-FvL9aTywCWmUzWkOCWjpE"/>
+</div>
+<h4 class="text-sm font-bold text-primary">รองนายก อบต. (1)</h4>
+<p class="text-xs text-slate-500">นายสมชาย มั่นคง</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3 rounded-xl shadow-md text-center border border-primary/5">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of Deputy Mayor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg4g5Cwq28rXPRn_cTaTYxKiN1nIheuNok0d4--Zw4s_9xnl6GEUksvPKDdhTWiH0RWFCFmSa1xiEefb0_x_ZnWrdnFbDm_c8x5KD8gfw15UFzo50TJvkMep2bVM4UEBS87pekeRGPc4YDuCt2csaUT-HApCxtWQxJi4Qb4uUZsDqY9ur6S_Y5SbSwLTnjeWIdXPNhsn_QfrOiXMu4lDrmEaA9Kt38hIxM7nFX7G7yKc0K7iJiKh3CX0NRSaMyUNr047FqBEz_WwA"/>
+</div>
+<h4 class="text-sm font-bold text-primary">รองนายก อบต. (2)</h4>
+<p class="text-xs text-slate-500">นางประภา สุขดี</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3 rounded-xl shadow-md text-center border border-primary/5">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of Chief Administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi0QIMg6D7UpSs2ObLP5m7j2HopxkqTnfRZnfcSVktZGCM0gcJ1LeD1wz500j8utEVPq1G0GNcF3bm9jM_e8aqekqR7AkSNi4lSw7YYlpm2TMOZeErlj4yaMyoXd-xF9HBbFFJUMU1E5DDozR9l-IDFcehnglEo60FpEcpXlbOYX9nNcwZZjrNCLpMTzsgZlaMdEKgzjzhSiij6mmLQio_lFEaZN6lRwicWqRPhFL1FwYKsnLIYSS5HVIdCLm4gQzUOJ5kbSxnJ34"/>
+</div>
+<h4 class="text-sm font-bold text-primary">ปลัด อบต.</h4>
+<p class="text-xs text-slate-500">นายวิทูรย์ นามสมมติ</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3 rounded-xl shadow-md text-center border border-primary/5">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-3">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of Deputy Chief Administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3013WoromIusIv9Wg0y7wRasiLH2ZqfzWnX6nSAb9c-61jA13aJj2IR6MI-9UjkLzFPQSKYNrNEHqohbTCnX80gbuCxL8gmEeUEzz8Ezi8J0Lh3kH-MVCENeLlaYp7OMnx0WzFrNDcFPCxD7LkTlSY9ZrzbGpYynbAKs19RFu1uJl-8rPsKhv5cKWzl4LUv60JOJQngR_ns6NOXmYcTdwm7tdPNUqAvi6kOvWBo14bBGRzkFznxJBs2G1j6CaILJzfz1HvjRStVU"/>
+</div>
+<h4 class="text-sm font-bold text-primary">รองปลัด อบต.</h4>
+<p class="text-xs text-slate-500">นางสาววิไล ไพศาล</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Organizational Structure & Development Plan -->
+<section class="py-20 max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">account_tree</span>
+<h2 class="text-2xl font-black text-primary dark:text-white uppercase">โครงสร้างองค์กร</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-background-dark rounded-xl border-l-4 border-secondary shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">สำนักปลัด</h4>
+<p class="text-xs text-slate-500">บริหารจัดการงานทั่วไป สารบรรณ และธุรการ</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-background-dark rounded-xl border-l-4 border-secondary shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">กองคลัง</h4>
+<p class="text-xs text-slate-500">การเงิน บัญชี พัสดุ และการจัดเก็บรายได้</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-background-dark rounded-xl border-l-4 border-secondary shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">กองช่าง</h4>
+<p class="text-xs text-slate-500">งานโยธา ผังเมือง และโครงสร้างพื้นฐาน</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-background-dark rounded-xl border-l-4 border-secondary shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">กองสาธารณสุขและสิ่งแวดล้อม</h4>
+<p class="text-xs text-slate-500">การจัดการขยะ สุขอนามัย และสิ่งแวดล้อม</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="bg-primary rounded-3xl p-8 text-white">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">download_for_offline</span>
+<h2 class="text-2xl font-black text-white uppercase">แผนพัฒนาท้องถิ่น</h2>
+</div>
+<p class="text-white/80 mb-8 leading-relaxed">
+                ดาวน์โหลดเอกสารแผนพัฒนาท้องถิ่นเพื่อตรวจสอบทิศทางการพัฒนาและโครงการต่างๆ ของ อบต.เมืองยะลา ประจำปีงบประมาณปัจจุบัน
+            </p>
+<div class="space-y-4">
+<a class="flex items-center justify-between p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary font-bold">PDF</div>
+<div>
+<h4 class="font-bold">แผนพัฒนาท้องถิ่น (พ.ศ. 2566-2570)</h4>
+<p class="text-xs text-white/60 italic">แก้ไขครั้งที่ 1/2567</p>
+</div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary font-bold">PDF</div>
+<div>
+<h4 class="font-bold">รายงานผลการดำเนินงานประจำปี 2566</h4>
+<p class="text-xs text-white/60 italic">สรุปผลงานภาพรวม</p>
+</div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary font-bold">PDF</div>
+<div>
+<h4 class="font-bold">ข้อบัญญัติงบประมาณรายจ่ายประจำปี 2567</h4>
+<p class="text-xs text-white/60 italic">ประกาศ ณ วันที่ 1 ต.ค. 66</p>
+</div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-[#051a14] text-white pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-12">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h2 class="text-xl font-bold text-white">อบต.เมืองยะลา</h2>
+</div>
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                    มุ่งเน้นการให้บริการประชาชนด้วยความโปร่งใส รวดเร็ว และเป็นธรรม เพื่อพัฒนาพื้นที่อำเภอเมืองยะลาให้เจริญก้าวหน้า
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+<div>
+<h3 id="contact" class="text-lg font-bold mb-6 border-b border-white/10 pb-2">
+ข้อมูลติดต่อ
+</h3>
+<ul class="space-y-4 text-sm text-white/80">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span>เลขที่ 123 หมู่ที่ 1 ถนนสุขยางค์ ตำบลสะเตงนอก อำเภอเมือง จังหวัดยะลา 95000</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">call</span>
+<span>073-123456 ต่อ 0 (สำนักปลัด)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">print</span>
+<span>073-654321</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span>saraban@mueangyala.go.th</span>
+</li>
+</ul>
+</div>
+<div class="rounded-2xl overflow-hidden h-64 border-2 border-white/5 shadow-2xl">
+<iframe data-location="Yala, Thailand" frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Yala&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%">
+</iframe>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 pt-8 border-t border-white/10 text-center text-xs text-white/50">
+<p>© 2024 องค์การบริหารส่วนตำบลเมืองยะลา จ.ยะลา - สงวนลิขสิทธิ์</p>
+<p class="mt-2">ออกแบบและพัฒนาโดย ส่วนเทคโนโลยีสารสนเทศ อบต.เมืองยะลา</p>
+</div>
+</footer>
+</body></html>

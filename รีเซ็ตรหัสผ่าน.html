@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ตั้งรหัสผ่านใหม่</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0f4d3a"
+      }
+    }
+  }
+}
+</script>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded-xl shadow-xl w-96">
+  <h2 class="text-2xl font-bold text-center text-primary mb-6">
+    ตั้งรหัสผ่านใหม่
+  </h2>
+
+  <form id="changePasswordForm" class="space-y-4">
+
+    <div>
+      <label class="block mb-1 text-sm font-medium">รหัสผ่านใหม่ (8 ตัว)</label>
+      <input 
+        type="password" 
+        id="newPassword"
+        maxlength="8"
+        required
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      >
+    </div>
+
+    <div>
+      <label class="block mb-1 text-sm font-medium">ยืนยันรหัสผ่าน</label>
+      <input 
+        type="password" 
+        id="confirmPassword"
+        maxlength="8"
+        required
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      >
+    </div>
+
+    <button 
+      type="submit"
+      class="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
+    >
+      ยืนยัน
+    </button>
+
+  </form>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div id="passwordModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center">
+  <div class="bg-white p-6 rounded-xl w-80 text-center shadow-2xl">
+    <h3 id="modalTitle" class="text-lg font-bold mb-2 text-primary"></h3>
+    <p id="modalMessage" class="text-sm mb-4"></p>
+    <a href="เข้าสู่ระบบ.html"
+   class="bg-primary text-white px-4 py-2 rounded-lg w-full font-semibold text-center block">
+   ตกลง
+</a>
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+document.getElementById("changePasswordForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const pass = document.getElementById("newPassword").value.trim();
+  const confirm = document.getElementById("confirmPassword").value.trim();
+
+  // ต้องครบ 8 ตัว
+  if (pass.length !== 8) {
+    showModal("รหัสผ่านไม่ถูกต้อง", "รหัสผ่านต้องมี 8 ตัวอักษรพอดี");
+    return;
+  }
+
+  // ต้องเหมือนกัน
+  if (pass !== confirm) {
+    showModal("รหัสผ่านไม่เหมือนกัน", "กรุณากรอกรหัสผ่านให้ตรงกันทั้งสองช่อง");
+    return;
+  }
+
+  showModal("สำเร็จ", "ตั้งค่ารหัสผ่านใหม่เรียบร้อยแล้ว");
+  this.reset();
+});
+
+function showModal(title, message) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalMessage").innerText = message;
+  document.getElementById("passwordModal").classList.remove("hidden");
+  document.getElementById("passwordModal").classList.add("flex");
+}
+
+function closeModal() {
+  document.getElementById("passwordModal").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>
